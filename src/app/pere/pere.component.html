@@ -1,0 +1,7 @@
+<!-- first part from parent to child-->
+<!--<div #colorBox [style.backgroundColor]="color">ena el bou</div>
+<app-fils [external]="color"></app-fils>-->
+
+<!-- second part from child to parent-->
+<div #colorBox [style.backgroundColor]="backgroundcolor">ena el bou</div>
+<app-fils (colorbackground)="showbackground($event)"></app-fils>
