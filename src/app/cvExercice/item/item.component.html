@@ -1,7 +1,7 @@
 <li class="list-group-item" *ngIf="cv" (click)="selectCv()">
   <img
     *ngIf="cv.path"
-    src="{{ cv.path }}"
+    src="{{ cv.path | defaultImage }}"
     width="50px"
     height="50px"
     alt="{{ cv.firstname }}"

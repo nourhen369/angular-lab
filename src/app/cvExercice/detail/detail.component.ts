@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { EmbaucheService } from 'src/app/embauche.service';
 import { Cv } from 'src/app/Model/Cv';
 
 @Component({
@@ -8,6 +10,16 @@ import { Cv } from 'src/app/Model/Cv';
 })
 export class DetailComponent implements OnInit {
   @Input() cv!: Cv;
-  constructor() {}
+  constructor(
+    private embaucheService: EmbaucheService,
+    private router: Router
+  ) {}
   ngOnInit(): void {}
+  embaucher() {
+    this.embaucheService.embaucher(this.cv);
+  }
+  moreInfo() {
+    const link = ['cv', this.cv.id];
+    this.router.navigate(link);
+  }
 }

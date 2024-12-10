@@ -6,7 +6,7 @@
           <img src="assets/images/rotating_card_thumb2.png" />
         </div>
         <div class="user">
-          <img class="img-circle" src="{{ cv.path }}" />
+          <img class="img-circle" src="{{ cv.path | defaultImage }}" />
         </div>
         <div class="content">
           <div class="main">
@@ -52,15 +52,12 @@
         </div>
         <div class="footer">
           <div class="social-links text-center">
-            <a href="https://creative-tim.com" class="facebook"
-              ><i class="fa fa-facebook fa-fw"></i
-            ></a>
-            <a href="https://creative-tim.com" class="google"
-              ><i class="fa fa-google-plus fa-fw"></i
-            ></a>
-            <a href="https://creative-tim.com" class="twitter"
-              ><i class="fa fa-twitter fa-fw"></i
-            ></a>
+            <button (click)="embaucher()" class="btn btn-succes">
+              Embaucher
+            </button>
+            <button (click)="moreInfo()" class="btn btn-primary">
+              Plus de détails
+            </button>
           </div>
         </div>
       </div>

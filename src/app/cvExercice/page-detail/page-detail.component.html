@@ -1,0 +1,53 @@
+<div class="d-flex justify-content-center" *ngIf="cv">
+  <div class="col-lg-8 push-lg-4">
+    <div class="tab-content p-b-3">
+      <div class="tab-pane active" id="profile">
+        <h4 class="m-y-2">Cv {{ cv.firstname }} {{ cv.name }}</h4>
+        <div class="d-flex justify-content-center">
+          <img
+            [src]="cv.path"
+            alt="Photo de {{ cv.firstname }} {{ cv.name }}"
+            width="150px"
+            height="150px"
+            class="rounded-circle align-c"
+          />
+        </div>
+        <div class="row mt-4">
+          <div class="col-md-12">
+            <h4 class="m-t-2 text-center">Informations</h4>
+            <table class="table table-hover table-striped">
+              <tbody>
+                <tr>
+                  <td><strong>Name:</strong></td>
+                  <td>{{ cv.name }}</td>
+                </tr>
+                <tr>
+                  <td><strong>First Name:</strong></td>
+                  <td>{{ cv.firstname }}</td>
+                </tr>
+                <tr>
+                  <td><strong>Job:</strong></td>
+                  <td>{{ cv.job }}</td>
+                </tr>
+                <tr>
+                  <td><strong>Age:</strong></td>
+                  <td>{{ cv.age }}</td>
+                </tr>
+                <tr>
+                  <td><strong>CIN:</strong></td>
+                  <td>{{ cv.cin }}</td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- Bouton supprimer -->
+            <div class="d-flex justify-content-center mt-3">
+              <button class="btn btn-danger" (click)="deleteCv()">
+                Supprimer
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
