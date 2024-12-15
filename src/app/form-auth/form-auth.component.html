@@ -1,0 +1,38 @@
+<form #formAuth="ngForm">
+       
+          <label for="email">
+            Email
+        </label>
+          <input 
+          email required 
+          type="text"
+           ngModel name="email"
+           #emailinput="ngModel"
+            class="form-control" id="email" >
+          <!--  <div class="alert alert danger" *ngIf="emailinput.invalid && (emailinput.touched || emailinput.dirty)">
+              L'email est invalide
+            </div>-->
+            <div class="alert alert danger" *ngIf="emailinput.invalid && (emailinput.touched || emailinput.dirty)">
+              <div *ngIf="emailinput.errors?.['required']">L'email est obligatoire.</div>
+              <div *ngIf="emailinput.errors?.['email']">L'email est invalide.</div>
+          </div>
+            <label for="password">
+                Password
+            </label>
+              <input 
+               required 
+               minlength="4"
+              type="password"
+               ngModel name="password"
+               #passwordinput="ngModel"
+                class="form-control" id="password" >
+                <div class="alert alert danger" *ngIf="passwordinput.invalid && (passwordinput.touched || passwordinput.dirty)">
+                  <div *ngIf="passwordinput.errors?.['required']">Le mot de passe est obligatoire.</div>
+                  <div *ngIf="passwordinput.errors?.['minlength']">Le mot de passe doit avoir au moins 4 caractères</div>
+              </div>
+                <br> <br/>
+
+    <button [disabled]="formAuth.invalid" class="btn btn-primary" (click)="login(formAuth)">
+        Envoyer
+    </button>
+</form>
