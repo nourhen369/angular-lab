@@ -1,5 +1,5 @@
 <div #colorBox [style.backgroundColor]="color">ena louni yetbaddel</div>
 
-<input type="text" #colorInput placeholder="Entrez une couleur" (input)="changeColor(colorInput.value)" />
+<input type="text" #colorInput placeholder="Entrez une couleur" (change)="changeColor(colorInput.value)" />
 
 <button (click)="resetColor()">Réinitialiser la couleur</button>
