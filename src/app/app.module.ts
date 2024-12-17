@@ -4,14 +4,15 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ColorChangerComponent } from './color-changer/color-changer.component';
-import { FormAuthComponent } from './form-auth/form-auth.component';
+
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ObservableComponent } from './observable/observable.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ColorChangerComponent,
-    FormAuthComponent
+    ObservableComponent
   ],
   imports: [
     BrowserModule,
