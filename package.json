@@ -10,7 +10,7 @@
   },
   "private": true,
   "dependencies": {
-<<<<<<< HEAD
+
     "@angular/animations": "^15.0.0",
     "@angular/common": "^15.0.0",
     "@angular/compiler": "^15.0.0",
@@ -23,7 +23,7 @@
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.3.3",
     "rxjs": "~7.5.0",
-=======
+
     "@angular/animations": "^16.2.0",
     "@angular/common": "^16.2.0",
     "@angular/compiler": "^16.2.0",
@@ -34,21 +34,21 @@
     "@angular/router": "^16.2.0",
     "bootstrap": "^5.3.3",
     "rxjs": "~7.8.0",
->>>>>>> 39fac60b6188901ff2e2ee716322388b4faa1670
+
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
   },
   "devDependencies": {
-<<<<<<< HEAD
+
     "@angular-devkit/build-angular": "^15.0.5",
     "@angular/cli": "~15.0.5",
     "@angular/compiler-cli": "^15.0.0",
     "@angular/localize": "^15.0.0",
-=======
+
     "@angular-devkit/build-angular": "^16.2.16",
     "@angular/cli": "^16.2.16",
     "@angular/compiler-cli": "^16.2.0",
->>>>>>> 39fac60b6188901ff2e2ee716322388b4faa1670
+
     "@types/jasmine": "~4.3.0",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
